@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    let obj={
+        name:"zhangsan",
+        age:18,
+        grade:{math:90,english:80},
+        friends:[{name:"a",age:15},{name:"b",age:18}]
+    };
+    //拷贝     更改bj2的内容，会影响obj
+    // let obj2=obj;
+    // obj2.age=19;
+    // console.log(obj);
+    //拷贝2 ：浅拷贝    更改bj2的内容，不会影响obj
+    // let obj2={};
+    // for(let i in obj){    //对obj的属性进行遍历
+    //     obj2[i]=obj[i]    //将obj[i]的属性给了obj2[i]
+    // }
+    // obj2.name="lisi";
+    // console.log(obj);
+
+    // let obj2={};
+    //  for(let i in obj){    //对obj的属性进行遍历
+    //       if(typeof obj[i]!=="object"){
+    //           obj2[i]=obj[i]
+    //       } else{
+    //           obj2[i]={}
+    //       }
+    //       for(let j in obj[i]){
+    //           obj2[i][j]=obj[i][j]
+    //       }
+    //  }
+    //  console.log(obj2);
+
+    //深拷贝   函数的递归调用
+    function deepcopy(o){
+        let newobj;
+        if(Array.isArray(o)){    //判断
+            newobj=[];
+        }else{
+            newobj={};
+        }
+        for(let i in o){          //遍历
+            if(typeof o[i]!=="object"){
+                newobj[i]=o[i]
+            }else{
+                newobj[i]=deepcopy(o[i]);  //递归调用
+            }
+        }
+        return newobj;
+    }
+    let obj2=deepcopy(obj)
+    obj2.friends[0]="xiaoming";
+    console.log(obj);
+    console.log(obj2);
+</script>
+<script>
+    // $.fn.extend({name:function(){
+    //     alert(1);
+    //     }})//扩展到jquery对象的原型身上
+    // //$.extent()    //扩展到jquery函数身上
+    // $("div").name();
+
+    //遍历：  $.each()    forEach()    for()   for   in
+    //数组
+    let arr=[11,22,33,44,55,66]
+    $.each(arr,function(index,value){    //遍历数组
+        console.log(index);
+        console.log(value);
+    })
+
+    $.each(obj,function(key,val){        //遍历对象
+        console.log(val);
+    })
+
+    let newarr=$.map(arr,function(value,index){    //map
+        return value*2;
+    })
+    console.log(newarr)
+
+    let newarr2=$.grep(arr,function(value,index){
+        return value<30;
+    })
+    console.log(newarr2);
+
+    //$,extend({})
+    // $.extend({fn:function(){alert(1)}})
+    // $.fn()
+
+    // getRandom(arr);
+    $.extend({
+        getRandom:function(arr){
+            var l=arr.length;      //从arr数组获取随机数
+            var num=Math.random()*l;
+            var pos=Math.floor(num);
+            return arr[pos];
+        }
+    })
+    console.log($.getRandom(arr));
+</script>
+
+</html>
