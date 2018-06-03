@@ -115,10 +115,10 @@ function render() {
     var data = getData();
     data.forEach(function (val, index) {
         if (state === "project" && val.done === false) {
-            str += "<li id=" + index + "><p>" + val.content + "</p><time>" + parseTime(val.time) + "</time><span class=" + (val.star ? "active" : "") + ">&#xe60c;</span><div class='changestate'>完成</div></li>";
+            str += "<li id=" + index + "><p>" + val.content + "</p><time>" + parseTime(val.time) + "</time><span class=" + (val.star ? "active" : "") + ">&#xe602;</span><div class='changestate'>完成</div></li>";
         }
         else if (state === "done" && val.done === true) {
-            str += "<li id=" + index + "><p>" + val.content + "</p><time>" + parseTime(val.time) + "</time><span class=" + (val.star ? "active" : "") + ">&#xe60c;</span><div class='del'>删除</div></li>";
+            str += "<li id=" + index + "><p>" + val.content + "</p><time>" + parseTime(val.time) + "</time><span class=" + (val.star ? "active" : "") + ">&#xe602;</span><div class='del'>删除</div></li>";
         }
     });
     $(".item_list").html(str);

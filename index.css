@@ -1,10 +1,10 @@
 @font-face {
-    font-family: 'iconfont';  /* project id 604880 */
-    src: url('https://at.alicdn.com/t/font_604880_npkr1paba8bedn29.eot');
-    src: url('https://at.alicdn.com/t/font_604880_npkr1paba8bedn29.eot?#iefix') format('embedded-opentype'),
-    url('https://at.alicdn.com/t/font_604880_npkr1paba8bedn29.woff') format('woff'),
-    url('https://at.alicdn.com/t/font_604880_npkr1paba8bedn29.ttf') format('truetype'),
-    url('https://at.alicdn.com/t/font_604880_npkr1paba8bedn29.svg#iconfont') format('svg');
+    font-family: 'iconfont';  /* project id 651103 */
+    src: url('https://at.alicdn.com/t/font_651103_5352k8thja2rcnmi.eot');
+    src: url('https://at.alicdn.com/t/font_651103_5352k8thja2rcnmi.eot?#iefix') format('embedded-opentype'),
+    url('https://at.alicdn.com/t/font_651103_5352k8thja2rcnmi.woff') format('woff'),
+    url('https://at.alicdn.com/t/font_651103_5352k8thja2rcnmi.ttf') format('truetype'),
+    url('https://at.alicdn.com/t/font_651103_5352k8thja2rcnmi.svg#iconfont') format('svg');
 }
 *{
     margin:0;
@@ -14,7 +14,7 @@
 
 }
 body{
-    background-color: #ccc;
+    /*background-color: #ccc;*/
 }
 .swiper-container {
     width:100vw;
@@ -41,6 +41,7 @@ body{
     font-size: 18px;
     font-weight: bold;
     color:#fff;
+    background: #ff6700;
 }
 .project.active{
     background-color: #22ddff;
@@ -74,7 +75,7 @@ body{
     width: 100vw;
     height: 8vh;
     line-height: 8vh;
-    border-bottom: 1px solid #9999ff;
+    border-bottom: 1px solid rgba(255, 0, 54, 0.38);
 }
 .item_list li p{
     width:60vw;
@@ -99,6 +100,7 @@ body{
     width:10vw;
     height: 6vh;
     text-align: center;
+    font-size: 5vw;
     /*background-color: blue;*/
     float: left;
 }
@@ -128,14 +130,17 @@ body{
     top: 0;
 }
 .add{
-    width: 100vw;
-    height: 10vh;
+    font-family: 'iconfont';
+    width: 10vw;
+    height: 10vw;
     background-color: indianred;
     text-align: center;
-    line-height: 10vh;
+    line-height: 10vw;
     font-size: 32px;
     font-weight: bold;
-    color:#fff;
+    border-radius: 50%;
+    color: rgba(255, 245, 253, 0.89);
+    margin-left: 10vw;
 }
 .mask{
     width: 100vw;
@@ -162,34 +167,43 @@ body{
     display: block;
 }
 .submit{
-    width: 100vw;
-    height: 10vh;
-    background-color:red;
+    font-family: 'iconfont';
+    width: 14vw;
+    margin: 3vw auto;
+    border-radius: 50%;
+    height: 14VW;
+    background-color: rgba(255, 0, 0, 0.53);
     text-align: center;
-    line-height: 10vh;
-    font-size: 32px;
+    line-height: 14VW;
+    font-size: 6VW;
     font-weight: bold;
     color:#fff;
 }
 .cancel{
-    width: 6vh;
-    height: 6vh;
+    font-family: 'iconfont';
+
+    width: 12vw;
+    height: 12vw;
     margin:3vh auto;
     border:1px solid #fff;
     text-align: center;
-    line-height: 6vh;
+    line-height: 12vw;
     color:#fff;
     font-size: 30px;
     border-radius: 50%;
 }
 .update{
-    width: 100vw;
-    height: 10vh;
+    font-family: 'iconfont';
     background-color:red;
     text-align: center;
-    line-height: 10vh;
-    font-size: 32px;
     font-weight: bold;
     color:#fff;
     display: none;
+    width: 14vw;
+    margin: 3vw auto;
+    border-radius: 50%;
+    height: 14VW;
+    background-color: rgba(255, 0, 0, 0.53);
+    line-height: 14VW;
+    font-size: 6VW;
 }
