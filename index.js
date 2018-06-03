@@ -28,7 +28,7 @@ $(".add").click(function () {
 $(".cancel").click(function () {
     $(".inputarea").transition({y: "-62vh"}, 500, function () {
         $(".mask").hide();
-    })
+    });
 })
 $(".submit").click(function () {
     var val = $("#text").val();
